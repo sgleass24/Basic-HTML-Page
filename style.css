@@ -3,8 +3,14 @@ body {
 }
 
 body {
-    font-family: "georgia"
+    font-family: "georgia";
   }
   body {
       text-align: center;
   }
+
+  h1 {font-size: 44px;
+    border: 24px inset gray;
+  }
+
+ 
