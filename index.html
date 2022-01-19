@@ -52,9 +52,11 @@
         <img src="images/SitcomsWeb2.jpg" alt=tv width="420" height="250">
         <br>
         <img src="images/phish-summer-tour-2020.jpg" alt=concert width="300" height="200">
-        <br> 
+        <br>
         <img src="images/comedy-6054626_1920.jpg" alt=standup width="300" height="200">
         <br>
+        <hr>
+
         <hr>
 
 
@@ -62,8 +64,102 @@
     </main>
     <br>
     <br>
-    
-   
+
+    <!-- creating DOM nodes -->
+    <h1>Hey this is all going to be created with JS...</h1>
+
+    <script>
+        var body = document.body;
+        var newImg = document.createElement('img');
+        newImg.src = "images/matrix.jpeg";
+        newImg.style.border = "5px dashed black";
+        newImg.style.height = "450px";
+        newImg.style.width = "400px";
+        body.appendChild(newImg);
+
+        var newHead = document.createElement('h1');
+        var newHeadText = document.createTextNode("The Matrix Resurrections");
+        newHead.appendChild(newHeadText);
+        newHead.className = "matrix";
+        newHead.style.color = "darkgreen";
+        newHead.style.backgroundColor = "white";
+        body.appendChild(newHead);
+
+        var newP = document.createElement('p');
+        var newPText = document.createTextNode("Return to a world of two realities: one, everyday life; the other, what lies behind it. To find out if his reality is a construct, to truly know himself, Mr. Anderson will have to choose to follow the white rabbit once more.");
+        newP.appendChild(newPText);
+        newP.className = "synopsis";
+        newP.style.textAlign = "center";
+        newP.style.color = "darkgreen";
+        newP.style.backgroundColor = "white";
+        body.appendChild(newP);
+
+        var newHead2 = document.createElement('h2');
+        var newHeadText2 = document.createTextNode("Cast");
+        newHead2.appendChild(newHeadText2);
+        newHead2.style.color = "darkgreen";
+        newHead2.style.backgroundColor = "white";
+        body.appendChild(newHead2);
+
+        var cast = [
+            {
+                character: 'Neo/Thomas Anderson',
+                actor: 'Keanu Reeves',
+                isInOne: true
+            },
+            {
+                character: 'Trinity/Tiffany',
+                actor: 'Carrie-Ann Moss',
+                isInOne: true
+            },
+            {
+                character: 'Bugs',
+                actor: 'Jessica Henwick',
+                isInOne: false
+            }
+        ];
+
+        for (var i = 0; i < cast.length; i++) {
+            var castList = document.createElement('p');
+            var castListText = document.createTextNode(cast[i].character + ' played by ' + cast[i].actor + ' was in the original' + ': ' + cast[i].isInOne);
+            castList.appendChild(castListText);
+            castList.style.color = "darkgreen";
+            castList.style.backgroundColor = "white";
+            body.appendChild(castList);
+        };
+
+
+
+
+        var books = [
+            {
+                title: 'The Design of EverDay Things',
+                author: 'Dom Norman',
+                alreadyRead: false
+            }, {
+                title: 'The Most Human',
+                author: 'Brian Christian',
+                alreadyRead: true
+            }
+
+        ];
+
+
+
+        for (var i = 0; i < books.length; i++) {
+            var bookInfo = document.createElement('p');
+            var bookInfoText = document.createTextNode('The title is' + books[i].title + ' written by ' + books[i].author + ' have read' + ': ' + books[i].alreadyRead);
+            bookInfo.appendChild(bookInfoText);
+            document.body.appendChild(bookInfo);
+        };
+
+
+
+
+    </script>
+
+
+
 </body>
 
 </html>
